@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دعوت‌نامه تولد لیونل مسی</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Vazirmatn',Tahoma,sans-serif;
+  background:#050505;color:#fff;overflow:hidden
+}
+.slider{height:100vh;width:100vw;position:relative}
+.page{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  padding:25px;opacity:0;pointer-events:none;transform:scale(1.04);
+  transition:opacity .7s ease,transform .7s ease;
+  background:
+    radial-gradient(circle at 50% 20%,rgba(0,180,255,.18),transparent 35%),
+    linear-gradient(135deg,#050505,#101014 55%,#020b12)
+}
+.page.active{opacity:1;pointer-events:auto;transform:scale(1)}
+.card{
+  width:min(900px,95vw);min-height:min(720px,88vh);border:1px solid rgba(255,255,255,.16);
+  border-radius:30px;padding:55px 35px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  background:rgba(255,255,255,.045);backdrop-filter:blur(14px);
+  box-shadow:0 30px 100px rgba(0,0,0,.55);position:relative;overflow:hidden
+}
+.card:before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;
+background:rgba(0,180,255,.10);filter:blur(70px);top:-170px;left:-130px}
+.eyebrow{font-size:14px;letter-spacing:4px;color:#64d8ff;margin-bottom:18px;font-weight:800}
+h1{font-size:clamp(42px,8vw,82px);line-height:1.15;font-weight:900;margin-bottom:22px}
+h2{font-size:clamp(30px,6vw,58px);margin-bottom:22px;font-weight:900}
+.accent{color:#61d9ff}
+.info{font-size:20px;line-height:2.2;color:#ddd;margin:10px 0}
+.date{font-size:28px;font-weight:800;margin:15px 0;color:#fff}
+.divider{width:90px;height:3px;background:#61d9ff;border-radius:10px;margin:15px auto 25px}
+.emoji{font-size:75px;margin-bottom:20px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.5))}
+.foods{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+.food{padding:20px 28px;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:rgba(255,255,255,.05);font-size:22px}
+.snoop{font-size:clamp(35px,7vw,70px);font-weight:900;text-transform:uppercase;letter-spacing:2px}
+.after{font-size:22px;color:#bbb;margin-top:10px}
+.nav{position:fixed;bottom:24px;left:0;right:0;display:flex;justify-content:center;gap:12px;z-index:10}
+button{font-family:inherit;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.09);color:#fff;
+padding:11px 22px;border-radius:999px;cursor:pointer;font-size:15px;backdrop-filter:blur(8px)}
+button:hover{background:rgba(97,217,255,.18)}
+.dots{position:fixed;top:24px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:10}
+.dot{width:8px;height:8px;border-radius:50%;background:#555;transition:.3s}
+.dot.active{width:28px;border-radius:8px;background:#61d9ff}
+.note{font-size:13px;color:#777;margin-top:35px}
+</style>
+</head>
+<body>
+<div class="slider">
+
+<section class="page active">
+  <div class="card">
+    <div class="emoji">⚽🎂</div>
+    <div class="eyebrow">YOU ARE INVITED</div>
+    <h1>جشن تولد<br><span class="accent">لیونل مسی</span></h1>
+    <div class="divider"></div>
+    <div class="date">۲۲ بهمن ۱۳۵۷</div>
+    <div class="info">📍 تهران — برج میلاد</div>
+    <p class="note">صفحه را ورق بزنید و ادامه‌ی برنامه را ببینید</p>
+  </div>
+</section>
+
+<section class="page">
+  <div class="card">
+    <div class="emoji">🍤🍲</div>
+    <div class="eyebrow">DINNER</div>
+    <h2>به صرف یک شام ویژه</h2>
+    <div class="divider"></div>
+    <div class="foods">
+      <div class="food">🦐 میگو</div>
+      <div class="food">🍲 قرمه‌سبزی</div>
+    </div>
+    <p class="info">یک شب خاص، با یک شام خاص در برج میلاد تهران</p>
+  </div>
+</section>
+
+<section class="page">
+  <div class="card">
+    <div class="emoji">🎤🔥</div>
+    <div class="eyebrow">ALL NIGHT LONG</div>
+    <h2>و اما بعد از شام...</h2>
+    <div class="divider"></div>
+    <div class="snoop">AFTER PARTY</div>
+    <div class="after">تا خود صبح، با حضور ویژه‌ی</div>
+    <div class="snoop accent" style="margin-top:12px">SNOOP DOGG</div>
+    <p class="info">آماده‌ی یک شب فراموش‌نشدنی باشید! 🕺💃</p>
+  </div>
+</section>
+
+</div>
+
+<div class="dots">
+  <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+</div>
+
+<div class="nav">
+  <button onclick="prev()">→ قبلی</button>
+  <button onclick="next()">بعدی ←</button>
+</div>
+
+<script>
+let current=0;
+const pages=document.querySelectorAll('.page');
+const dots=document.querySelectorAll('.dot');
+
+function show(n){
+  current=(n+pages.length)%pages.length;
+  pages.forEach((p,i)=>p.classList.toggle('active',i===current));
+  dots.forEach((d,i)=>d.classList.toggle('active',i===current));
+}
+function next(){show(current+1)}
+function prev(){show(current-1)}
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowLeft') next();
+  if(e.key==='ArrowRight') prev();
+});
+let startX=0;
+document.addEventListener('touchstart',e=>startX=e.touches[0].clientX,{passive:true});
+document.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].clientX-startX;
+  if(Math.abs(dx)>50) dx<0?next():prev();
+},{passive:true});
+</script>
+</body>
+</html>
